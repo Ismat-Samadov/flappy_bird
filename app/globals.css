@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: "Press Start 2P", monospace, Arial, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(250, 204, 21, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(250, 204, 21, 0.8); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scorePopup {
+  0% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-float { animation: float 2s ease-in-out infinite; }
+.animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+.animate-scorePopup { animation: scorePopup 0.2s ease-out forwards; }
